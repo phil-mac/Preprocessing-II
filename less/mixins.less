@@ -1,5 +1,7 @@
 // Mixins in here
 
+
+
 .button-basic(@background, @color, @width){
     background: @background;
     color: @color;
@@ -9,4 +11,46 @@
 
     width: @width;
     padding: 12px 0;
+
+    @keyframes buttonHoverAnim{
+        from{
+            background: @background;
+            color: @color;
+        }
+        
+        to{
+            background: tint(@background, 70%);
+            color: @background;
+        }
+    }
+
+    &:hover{
+        animation: buttonHoverAnim 0.5s;
+
+        background: tint(@background, 70%);
+        color: @background;
+    }
+}
+
+.enlargeAnim(@startWidth, @endWidth, @startPos, @endPos){
+
+    @keyframes enlarge{
+        from{
+            width: @startWidth;
+            left: @startPos;
+        }
+
+        to{
+            width: @endWidth;
+            left: @endPos;
+        }
+    }
+
+    &:hover{
+        position: absolute;
+        
+        animation: enlarge 1s;
+        width: @endWidth;
+        left: @endPos;
+    }
 }
