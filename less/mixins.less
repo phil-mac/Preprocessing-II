@@ -32,9 +32,9 @@
     }
 }
 
-.enlargeAnim(@startWidth, @endWidth, @startPos, @endPos){
+.enlargeAnim(@startWidth, @endWidth, @startPos, @endPos, @animName){
 
-    @keyframes enlarge{
+    @keyframes @animName{
         from{
             width: @startWidth;
             left: @startPos;
@@ -49,7 +49,7 @@
     &:hover{
         position: absolute;
         
-        animation: enlarge 1s;
+        animation: @animName 1s;
         width: @endWidth;
         left: @endPos;
     }

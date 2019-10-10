@@ -278,7 +278,7 @@ img {
     width: 100%;
   }
 }
-@keyframes enlarge {
+@keyframes zoom1 {
   from {
     width: 23vw;
     left: 53vw;
@@ -290,7 +290,23 @@ img {
 }
 .home .content-section .img-content .adventureImg:hover {
   position: absolute;
-  animation: enlarge 1s;
+  animation: zoom1 1s;
+  width: 53vw;
+  left: 23vw;
+}
+@keyframes zoom2 {
+  from {
+    width: 23vw;
+    left: 23vw;
+  }
+  to {
+    width: 53vw;
+    left: 23vw;
+  }
+}
+.home .content-section .img-content .funImg:hover {
+  position: absolute;
+  animation: zoom2 1s;
   width: 53vw;
   left: 23vw;
 }
